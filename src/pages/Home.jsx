@@ -9,6 +9,7 @@ import { GiErlenmeyer, GiDinosaurBones, GiLogicGateOr} from 'react-icons/gi'
 
 import '../styles/home.scss'
 import Today from '../components/Today/Today'
+import Perfil from '../components/Perfil/Perfil'
 
 function Home(props) {
 
@@ -20,29 +21,7 @@ function Home(props) {
 
             <div className='home-perfil'>
 
-                <div className='perfil-row'>
-                    <img src={data["URLFoto"]} alt="" className='perfil-foto'/>
-
-                    <div className='perfil-col'>
-
-                        <span className='badge'>Estudante</span>
-                        <span className='name'>João Vitor</span>
-
-                        <div className='info-group'>
-                            <span className='label'>Curso:</span>
-                            <span className='answer'>Pré-Vestibular</span>
-                        </div>
-
-                        <div className='info-group'>
-                            <span className='label'>Turma:</span>
-                            <span className='answer'>Pixinguinha - Tarde</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button className='btn-perfil'>Acessar Perfil</button>
+                <Perfil data={data}/>
 
             </div>
 
