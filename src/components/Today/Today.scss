@@ -1,0 +1,52 @@
+.today-container{
+    width: 100%;
+    background-color: var(--black);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px black;
+
+    .today-name{
+        font-weight: bolder;
+        font-size: 20px;
+        color: var(--red);
+    }
+
+    .today{
+        font-size: 14px;
+        color: var(--red);
+        font-weight: bold;
+        margin-top: 4px;
+    }
+
+    .aulas{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .aula{
+            margin-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            color: var(--white);
+            
+            .aula-name{
+                font-weight: bolder;
+                font-size: 16px;
+            }
+            
+            .aula-assunto{
+                font-weight: bold;
+                width: 270px;
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
