@@ -8,10 +8,10 @@ const menuItems = [
   { label: 'Home', url: '/' },
   { label: 'Disciplinas', url: '/' },
   { label: 'Biblioteca', url: '/' },
-  { label: 'Quizz', url: '/' },
+  { label: 'Quiz', url: '/Quiz' },
   { label: 'Recomendações', url: '/' },
   { label: 'Configurações', url: '/' },
-];
+];  
 
 function MobileMenu(props) {
   const data = props.data
@@ -42,7 +42,7 @@ function MobileMenu(props) {
             </div>
           </div>
 
-          <TbEdit className='btn-edit'/>
+          <TbEdit className='btn-edit' />
 
         </div>
 
