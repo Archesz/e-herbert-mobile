@@ -2,8 +2,28 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './styles/global.scss'
+
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
+import Disciplina from './pages/Disciplina';
+import Conteudo from './pages/Conteudo';
+
+// Firebase
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDZc7R_-lLK9xKfa4_610JI7Izk4b831Xc",
+  authDomain: "crudherbert.firebaseapp.com",
+  databaseURL: "https://crudherbert-default-rtdb.firebaseio.com",
+  projectId: "crudherbert",
+  storageBucket: "crudherbert.appspot.com",
+  messagingSenderId: "382234945560",
+  appId: "1:382234945560:web:e0e3b7df6c372bc513fb6d",
+  measurementId: "G-RBB092Q5HF"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 const data = {
   "Nome": "João Vitor",
@@ -15,7 +35,13 @@ const data = {
                 {"Nome": "Darwin? It's me!", "URL": "https://static.thenounproject.com/png/365272-200.png", "Label": "Minha pontuação em evolução está alta!"}
               ],
   "Email": "jv86679@gmail.com",
-  "Celular": "(19) 99539-7660"
+  "Celular": "(19) 99539-7660",
+  "Social": {
+    "Instagram": "https://www.instagram.com/jovi.arch/",
+    "Twitter": "https://twitter.com/Jovarch",
+    "Discord": "",
+    "Whatsapp": ""
+  }
 }
 
 const questions = [
@@ -104,14 +130,35 @@ const questions = [
   }
 ];
 
+let data3 = {
+  "Materia": "Matemática",
+  "Nome": "Equação do 1º Grau",
+  "Material": [{"Nome": "Introdução a Equação de 1º Grau", "Link": "https://drive.google.com/file/d/1yHojMK9VH3qoNP6aZ15X8Q5j1OUwIDO1/view?usp=share_link"},
+               {"Nome": "Equações de 1º Grau - Regras", "Link": "https://drive.google.com/file/d/13CRTTCpjc9VUcyyoNfT6BL8zC0tWbn45/view?usp=share_link"}],
+  "Exercicios": [
+    {"Enunciado": "Qual é a solução da equação 3x + 4 = 10?", "Alternativas": ["a) x = 2", "b) x = 3", "c) x = 4", "d) x = 5"], "Gabarito": "a) x = 2"},
+    {"Enunciado": "Qual é a solução da equação 2x + 5 = 3x - 1?", "Alternativas": ["a) x = 6", "b) x = 6", "c) x = -6", "d) x = -7"], "Gabarito": "b) x = 7", "Resolução": "Para resolver a equação 2x + 5 = 3x - 1, precisamos encontrar o valor de x que satisfaz a equação. Para isso, podemos seguir os seguintes passos:\n\n1. Isolar o termo com x em um lado da equação. Podemos fazer isso subtraindo 2x de ambos os lados da equação, o que nos dá:\n\n   2x + 5 - 2x = 3x - 1 - 2x\n\n   Simplificando, temos:\n\n   5 = x - 1\n\n2. Isolar x no lado direito da equação. Podemos fazer isso adicionando 1 a ambos os lados da equação, o que nos dá:\n\n   5 + 1 = x - 1 + 1\n\n   Simplificando, temos:\n\n   6 = x\n\nPortanto, a solução da equação 2x + 5 = 3x - 1 é x = 6. Podemos verificar que isso é verdadeiro substituindo x = 6 na equação original:\n\n   2(6) + 5 = 3(6) - 1\n\n   12 + 5 = 18 - 1\n\n   17 = 17\n\n   Como a igualdade é verdadeira, a solução x = 6 é válida."},
+    {"Enunciado": "Uma loja de eletrônicos oferece um desconto de R$ 50,00 em todos os smartphones à venda. Se o preço original de um smartphone é de R$ 900,00, qual é o preço com o desconto?", "Alternativas": ["a) R$ 850,00", "b) R$ 860,00", "c) R$ 870,00", "d) R$ 880,00"], "Gabarito": "a) R$ 850,00"},
+    {"Enunciado": "Um pintor cobra R$ 35,00 por hora para pintar paredes. Ele foi contratado para pintar duas paredes de um cômodo, uma medindo 4 metros de largura por 3 metros de altura e outra medindo 3 metros de largura por 3 metros de altura. Se ele leva em média 4 horas para pintar cada parede, qual é o valor total que ele vai cobrar pelo trabalho?", "Alternativas": ["a) R$ 420,00", "b) R$ 440,00", "c) R$ 460,00", "d) R$ 480,00"], "Gabarito": "d) R$ 480,00"},
+  ]
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home data={data}/>
+    element: <Home data={data} base={firebase}/>
   },
   {
     path: "/Quiz",
-    element: <Quiz questions={questions} data={data}/>
+    element: <Quiz questions={questions} data={data} base={firebase}/>
+  },
+  {
+    path: "/Disciplina",
+    element: <Disciplina data={data} base={firebase}/>
+  },
+  {
+    path: "/Conteudo",
+    element: <Conteudo data={data3} user={data} base={firebase}/>
   }
 ]);
 
