@@ -33,8 +33,8 @@ function Perfil(props) {
                     <span className='perfil-course'>{data["Primeira Opção"]}</span>
                 </div>
 
-                <span className='perfil-turma'>Pixinguinha - Tarde</span>
-                <span className='perfil-curso'>Vestibular</span>
+                <span className='perfil-turma'>{data["Turma"]} - {data["Periodo"]}</span>
+                <span className='perfil-curso'>{data["Curso"]}</span>
             </div>
 
             <div className='divisor'></div>

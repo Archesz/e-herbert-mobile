@@ -10,9 +10,6 @@ import Disciplina from './pages/Disciplina';
 import Conteudo from './pages/Conteudo';
 import Eventos from './pages/Eventos';
 
-// Componentes Fixos
-import Menu from './components/Menu/Menu'
-
 // Firebase
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
