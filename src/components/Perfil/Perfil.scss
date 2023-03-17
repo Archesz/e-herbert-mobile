@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 99;
 
     .perfil-top{
         width: 100%;
@@ -51,6 +52,7 @@
                 font-size: 22px;
                 font-weight: bolder;
                 color: white;
+                margin-top: 12px;
             }
 
             .perfil-nickname{
@@ -105,7 +107,7 @@
         .perfil-row{
             display: flex;
             flex-direction: row;
-            width: 80%;
+            width: 40%;
             height: auto;
             justify-content: space-around;
             gap: 14px;
@@ -116,28 +118,45 @@
                 width: 38px;
                 height: 38px;
                 color: white;
-            }
-
-            .discord{
-                color: #7289DA;
+                padding: 5px;
+                border-radius: 6px;
+                box-shadow: 4px 4px 6px black;
             }
 
             .whatsapp{
                 color: #25D366;
+                background-color: #188640;
             }
 
             .twitter{
                 color: #1DA1F2;
+                background-color: #156fa7;
+
             }
 
             .instagram{
                 color: #E1306C;
+                background-color: #6b0829;
             }
         }
 
         .btn-more{
             color: white;
             font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .btn-perfil{
+            width: 70%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            background-color: var(--red-dark);
+            color: var(--white);
+            font-weight: bolder;
+            font-size: 16px;
+            margin-top: 16px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
         }
     }
 }

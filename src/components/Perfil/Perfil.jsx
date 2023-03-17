@@ -6,6 +6,10 @@ import {TbBrandInstagram, TbBrandWhatsapp} from 'react-icons/tb'
 import {TiSocialTwitter} from 'react-icons/ti'
 import {BsDiscord} from 'react-icons/bs'
 
+function goToLink(link){
+    window.location.href(link, "_blank")
+}
+
 function Perfil(props) {
     
     let data = props.data
@@ -20,10 +24,10 @@ function Perfil(props) {
                 <img src={data["URLFoto"]} className='perfil-photo' alt='Foto de Perfil'/>
 
                 <div className='perfil-infos'>
-                    <span className='perfil-name'>João Vitor</span>
-                    <span className='perfil-nickname'>Jovi</span>
+                    <span className='perfil-name'>{data["Primeiro Nome"]}</span>
+                    <span className='perfil-nickname'>{data["Apelido"]}</span>
 
-                    <span className='perfil-course'>Ciência da Computação</span>
+                    <span className='perfil-course'>{data["Primeira Opção"]}</span>
                 </div>
 
                 <span className='perfil-turma'>Pixinguinha - Tarde</span>
@@ -33,29 +37,16 @@ function Perfil(props) {
             <div className='divisor'></div>
 
             <div className='perfil-bottom'>
-
-                <span className='perfil-title'>Contato</span>
                 
                 <div className='perfil-row'>
                     
-                        <TbBrandInstagram className='perfil-icon instagram' onClick={() => {window.location.href(data["Social"]["Instagram"], "_blank")}}/> 
-                        <TiSocialTwitter className='perfil-icon twitter' onClick={() => {window.location.href(data["Social"]["Twitter"], "_blank")}}/>
-                        <TbBrandWhatsapp className='perfil-icon whatsapp' onClick={() => {window.location.href(data["Social"]["Whatsapp"], "_blank")}}/> 
+                        <TbBrandInstagram className='perfil-icon instagram' onClick={() => {goToLink(data["Social"]["Instagram"])}}/>
+                        <TiSocialTwitter className='perfil-icon twitter' onClick={() => {goToLink(data["Social"]["Twitter"])}}/>
+                        <TbBrandWhatsapp className='perfil-icon whatsapp' onClick={() => {goToLink(data["Social"]["Whatsapp"])}}/>
 
                 </div>
 
-                <span className='perfil-title mt-4'>Conquistas</span>
-                
-                <div className='perfil-row'>
-                    
-                    {conquistas.map((conquista) => {
-                        return(
-                            <Conquista name={conquista["Nome"]} image={conquista["URL"]}/>
-                        )
-                    })}
-
-                </div>
-                <span className='btn-more'>Ver todas</span>
+                <button className='btn-perfil'>Perfil Completo</button>
 
             </div>
 

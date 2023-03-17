@@ -18,13 +18,17 @@ function goToDisciplina(disciplina){
 
 function Home(props) {
 
-    let data = props.data
+    const objetoSerializado = localStorage.getItem("HerbertData");
+    const data = JSON.parse(objetoSerializado)[0];
 
     return (
         <div className='container-home'>
 
-            <div className='home-perfil'>
+            <Menu data={data}/>
 
+            <div className='home-perfil-background'></div>
+
+            <div className='home-perfil'>
                 <Perfil data={data}/>
 
             </div>
