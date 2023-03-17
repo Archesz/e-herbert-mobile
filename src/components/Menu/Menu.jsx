@@ -19,6 +19,13 @@ function MobileMenu(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
+  let urlfoto = ""
+  if(data["URLFoto"] == ""){
+      urlfoto = "https://dev.promoview.com.br/uploads/2017/04/b72a1cfe.png"
+  } else{
+      urlfoto = data["URLFoto"]
+  }
+
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
@@ -38,7 +45,7 @@ function MobileMenu(props) {
         <MdSearch onClick={() => {handleSearchIconClick()}}/>
         <MdNotifications />
 
-        <Avatar url={data["URLFoto"]} />
+        <Avatar url={urlfoto} />
       </div>
 
       {isSearchVisible && (

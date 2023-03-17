@@ -11,6 +11,12 @@ function goToLink(link){
 function Perfil(props) {
     
     let data = props.data
+    let urlfoto = ""
+    if(data["URLFoto"] == ""){
+        urlfoto = "https://dev.promoview.com.br/uploads/2017/04/b72a1cfe.png"
+    } else{
+        urlfoto = data["URLFoto"]
+    }
 
     return (
         <div className='perfil-container'>
@@ -18,7 +24,7 @@ function Perfil(props) {
             <div className='perfil-top'>
                 <div className='perfil-badge'>Estudante</div>
 
-                <img src={data["URLFoto"]} className='perfil-photo' alt='Foto de Perfil'/>
+                <img src={urlfoto} className='perfil-photo' alt='Foto de Perfil'/>
 
                 <div className='perfil-infos'>
                     <span className='perfil-name'>{data["Primeiro Nome"]}</span>
