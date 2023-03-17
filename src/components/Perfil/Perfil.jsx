@@ -13,7 +13,6 @@ function goToLink(link){
 function Perfil(props) {
     
     let data = props.data
-    let conquistas = data["Conquistas"]
 
     return (
         <div className='perfil-container'>
