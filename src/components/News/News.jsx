@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import './News.scss'
 
 let data = [
-    {"Nome": "Enem USP 2023: veja as notas de corte!", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/unicamp-libera-2-chamada-do-vestibular-2023/354179.html", "Data": "03/03/2023", "Hora": "11:45"},
-    {"Nome": "Pré-Enem Digital 2023, no Mato Grosso, recebe inscrições", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/como-lidar-emocional-baixa-nota-enem-reprovacao-vestibular/354183.html", "Data": "03/03/2023", "Hora": "10:45"},
-    {"Nome": "Primeiro lugar no Vestibular 2023 de Medicina da Unesp dá dicas de estudo", "Link": "https://vestibular.brasilescola.uol.com.br/enem/estudante-nota-1000-na-redacao-do-enem-2022-afirma-que-leitura-foi-seu-diferencial/354171.html","Data": "03/03/2023", "Hora": "12:00"},
+    {"Nome": "UERJ 2024: último dia para solicitar a isenção da taxa do Vestibular", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/vestibular-uerj-2024-ultimo-dia-para-pedir-isencao-da-taxa-de-inscricao/354320.html", "Data": "17/03/2023", "Hora": "11:00"},
+    {"Nome": "ENEM 2023: confira como conseguir a isenção da taxa de inscrição", "Link": "https://vestibular.brasilescola.uol.com.br/enem/enem-2023-confira-como-conseguir-a-isencao-da-taxa-de-inscricao/354323.html", "Data": "17/03/2023", "Hora": "12:45"},
+    {"Nome": "Datas do Vestibulinho 2023/2 das Etecs (SP) são liberadas", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/etecs-sp-datas-do-vestibulinho-2023-2-sao-publicadas/354322.html","Data": "17/03/2023", "Hora": "14:00"},
 ]
 
 function News() {

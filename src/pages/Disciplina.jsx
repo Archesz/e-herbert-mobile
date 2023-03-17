@@ -36,7 +36,11 @@ function Disciplina(props){
 
             <div className='disciplina-col'>
 
-                <span className='disciplina-title'>{disciplina}</span>
+                <div className='disciplina-welcome'>
+                    <span className='disciplina-title'>{disciplina}</span>
+                    <span className='disciplina-subtitle'>A ciência da lógica e dos números!</span>                
+                </div>
+
 
                 <div className='assuntos'>
                     {assuntos.map((assunto, index) => {

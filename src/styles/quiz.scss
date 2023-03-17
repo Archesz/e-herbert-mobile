@@ -4,9 +4,13 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: var(--background);
     padding: 100px 20px;
+
+    .quiz-aviso{
+      font-weight: bold;
+      color: var(--red);
+    }
 
 }
 

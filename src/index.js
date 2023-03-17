@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Quiz from './pages/Quiz';
 import Disciplina from './pages/Disciplina';
 import Conteudo from './pages/Conteudo';
+import Eventos from './pages/Eventos';
 
 // Componentes Fixos
 import Menu from './components/Menu/Menu'
@@ -85,7 +86,7 @@ const questions = [
       'Os fungos se reproduzem sexuadamente por meio da fertilização',
       'Os fungos se reproduzem sexuadamente por meio da clonagem',
     ],
-    answer: 'Os fungos se reproduzem sexuadamente por meio da fertilização',
+    answer: 'Os fungos se reproduzem assexuadamente por meio de esporos',
   },
   {
     text:
@@ -172,6 +173,10 @@ const router = createBrowserRouter([
   {
     path: "Perfil",
     element: <PerfilConfig base={firebase}/>
+  },
+  {
+    path: "Eventos",
+    element: <Eventos base={firebase}/>
   }
 ]);
 

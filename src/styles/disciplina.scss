@@ -8,15 +8,6 @@
     background-color: var(--background);
     padding: 40px 0px;
 
-    .disciplina-title{
-        margin-top: 20px;
-        font-weight: bolder;
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: var(--white);
-        text-align: center;
-    }
-
     .assuntos{
         display: flex;
         flex-direction: column;
@@ -30,6 +21,30 @@
     width: 100%;
     height: auto;
     padding: 20px 40px;
+
+    .disciplina-welcome{
+        margin-top: 40px;
+        height: 100px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        
+        .disciplina-title{
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 32px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .disciplina-subtitle{
+            color: white;
+        }
+
+    }
 }
 
 .disciplina-row{

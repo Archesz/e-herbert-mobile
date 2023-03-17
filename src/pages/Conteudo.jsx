@@ -14,13 +14,16 @@ function Conteudo(props) {
     const [type, setType] = useState("Material")
 
     return (
-        <div className='conteudo-container'>
+        <div className='conteudo-container-screen'>
 
             <Menu data={user}/>
 
             <div className='conteudo-col'>
                 
-                <span className='conteudo-name'>{data["Materia"]} - {data["Nome"]}</span>
+                <div className='conteudo-welcome'>
+                    <span className='conteudo-name'>{data["Materia"]}</span>
+                    <span className='conteudo-assunto'>{data["Nome"]}</span>                
+                </div>
 
                 <div className='conteudo-options'>
                     <DisciplinaIcon materia="Material" icon={<TbBook2 className="option-icon"/>} onClick={() => {setType("Material")}}/>

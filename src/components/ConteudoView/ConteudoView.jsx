@@ -61,7 +61,9 @@ function ConteudoView(props) {
         )
     } else if(props.type === "Vídeos"){
         return(
-            <span>Sem vídeos disponíveis por enquanto.</span>
+            <div className='conteudoView-container'>
+                <span className='no-video'>Sem vídeos disponíveis por enquanto.</span>
+            </div>
         )
     }
 }

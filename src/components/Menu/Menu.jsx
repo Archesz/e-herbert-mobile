@@ -8,12 +8,10 @@ import logo from '../../assets/logo.png'
 import Avatar from '../Avatar/Avatar';
 
 const menuItems = [
-  { label: 'Home', url: '/' },
-  { label: 'Disciplinas', url: '/' },
-  { label: 'Biblioteca', url: '/' },
-  { label: 'Quiz', url: '/Quiz' },
-  { label: 'Recomendações', url: '/' },
-  { label: 'Configurações', url: '/' },
+  { label: 'Home', url: '/Home' },
+  { label: 'Eventos', url: '/Eventos' },
+  { label: 'Biblioteca', url: '/Home' },
+  { label: 'Quiz', url: '/Quiz' }
 ];
 
 function MobileMenu(props) {

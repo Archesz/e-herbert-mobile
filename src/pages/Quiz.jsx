@@ -25,19 +25,19 @@ function Quiz(props) {
 
   const renderQuestion = (question, index) => {
     return (
-        <div key={index}>
-          <h2>{question.text}</h2>
-          {question.options.map((option, index) => (
-            <label key={index}>
-              <input
-                type="radio"
-                value={option}
-                checked={userAnswer === option}
-                onChange={() => handleAnswerSelected(option)}
-              />
-              {option}
-            </label>
-          ))}
+      <div key={index}>
+        <h2>{question.text}</h2>
+        {question.options.map((option, index) => (
+          <label key={index}>
+            <input
+              type="radio"
+              value={option}
+              checked={userAnswer === option}
+              onChange={() => handleAnswerSelected(option)}
+            />
+            {option}
+          </label>
+        ))}
       </div>
     );
   };
@@ -45,6 +45,10 @@ function Quiz(props) {
   return (
     <div className='quiz-container'>
       <Menu data={data} />
+
+      <span className='quiz-aviso'>Esse quiz ainda está em fase de testes.</span>
+      <span className='quiz-aviso'>As respostas e pontuações ainda não estão contando.</span>
+
       <div className="quiz">
         {currentQuestion < questions.length ? (
           <>
