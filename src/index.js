@@ -4,13 +4,18 @@ import ReactDOM from 'react-dom/client';
 import './styles/global.scss'
 
 import Home from './pages/Home';
+import Login from './pages/Login';
 import Quiz from './pages/Quiz';
 import Disciplina from './pages/Disciplina';
 import Conteudo from './pages/Conteudo';
 
+// Componentes Fixos
+import Menu from './components/Menu/Menu'
+
 // Firebase
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
+import Footer from './components/Footer/Footer';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDZc7R_-lLK9xKfa4_610JI7Izk4b831Xc",
@@ -39,8 +44,7 @@ const data = {
   "Social": {
     "Instagram": "https://www.instagram.com/jovi.arch/",
     "Twitter": "https://twitter.com/Jovarch",
-    "Discord": "",
-    "Whatsapp": ""
+    "Whatsapp": "https://wa.me/5519995397660",
   }
 }
 
@@ -146,6 +150,10 @@ let data3 = {
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Login base={firebase}/>
+  },
+  {
+    path: "/Home",
     element: <Home data={data} base={firebase}/>
   },
   {

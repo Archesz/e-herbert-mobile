@@ -9,6 +9,7 @@ import { GiErlenmeyer, GiDinosaurBones, GiLogicGateOr} from 'react-icons/gi'
 import '../styles/home.scss'
 import Today from '../components/Today/Today'
 import Perfil from '../components/Perfil/Perfil'
+import Footer from '../components/Footer/Footer'
 
 function goToDisciplina(disciplina){
     localStorage.setItem("Disciplina", disciplina);
@@ -21,7 +22,6 @@ function Home(props) {
 
     return (
         <div className='container-home'>
-            <Menu data={data}/>
 
             <div className='home-perfil'>
 
@@ -55,7 +55,6 @@ function Home(props) {
                 <Today />
 
             </div>
-
         </div>
     )
 }

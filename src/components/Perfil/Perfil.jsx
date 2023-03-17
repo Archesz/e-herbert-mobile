@@ -38,10 +38,9 @@ function Perfil(props) {
                 
                 <div className='perfil-row'>
                     
-                        <TbBrandInstagram className='perfil-icon instagram'/>
-                        <TiSocialTwitter className='perfil-icon twitter'/>
-                        <BsDiscord className='perfil-icon discord'/>
-                        <TbBrandWhatsapp className='perfil-icon whatsapp'/>
+                        <TbBrandInstagram className='perfil-icon instagram' onClick={() => {window.location.href(data["Social"]["Instagram"], "_blank")}}/> 
+                        <TiSocialTwitter className='perfil-icon twitter' onClick={() => {window.location.href(data["Social"]["Twitter"], "_blank")}}/>
+                        <TbBrandWhatsapp className='perfil-icon whatsapp' onClick={() => {window.location.href(data["Social"]["Whatsapp"], "_blank")}}/> 
 
                 </div>
 
