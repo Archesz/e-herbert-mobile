@@ -16,6 +16,7 @@ import Menu from './components/Menu/Menu'
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import Footer from './components/Footer/Footer';
+import PerfilConfig from './pages/PerfilConfig';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDZc7R_-lLK9xKfa4_610JI7Izk4b831Xc",
@@ -167,6 +168,10 @@ const router = createBrowserRouter([
   {
     path: "/Conteudo",
     element: <Conteudo data={data3} user={data} base={firebase}/>
+  },
+  {
+    path: "Perfil",
+    element: <PerfilConfig base={firebase}/>
   }
 ]);
 

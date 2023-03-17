@@ -1,11 +1,14 @@
 import React from 'react'
 import './Conquista.scss'
 
+import badge from '../../assets/icones/hiking.png'
+
 function Conquista(props) {
+
     return (
         <div className='conquista-container'>
             
-            <img src={props.image} alt={props.label} className="conquista-icon"/>
+            <img src={badge} className="icon" alt="" />
             <span className='conquista-name'>{props.name}</span>
 
         </div>

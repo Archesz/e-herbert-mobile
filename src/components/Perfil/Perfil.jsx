@@ -1,10 +1,8 @@
 import React from 'react'
-import Conquista from '../Conquista/Conquista'
 import './Perfil.scss'
 
 import {TbBrandInstagram, TbBrandWhatsapp} from 'react-icons/tb'
 import {TiSocialTwitter} from 'react-icons/ti'
-import {BsDiscord} from 'react-icons/bs'
 
 function goToLink(link){
     window.location.href(link, "_blank")
@@ -45,7 +43,7 @@ function Perfil(props) {
 
                 </div>
 
-                <button className='btn-perfil'>Perfil Completo</button>
+                <button className='btn-perfil' onClick={() => {window.location.assign("./Perfil")}}>Perfil Completo</button>
 
             </div>
 

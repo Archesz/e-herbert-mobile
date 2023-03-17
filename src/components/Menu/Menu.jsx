@@ -33,7 +33,7 @@ function MobileMenu(props) {
     <nav className="mobile-menu">
       <div className="mobile-menu-top">
 
-        <img src={logo} alt="Logo Herbert" className='mobile-logo' />
+        <img src={logo} alt="Logo Herbert" className='mobile-logo' onClick={() => {window.location.assign("/Home")}}/>
 
         <TbMenu2 className="mobile-menu-button" onClick={handleMenuClick} />
 
