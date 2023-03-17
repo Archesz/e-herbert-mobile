@@ -4,7 +4,8 @@ import Menu from '../components/Menu/Menu'
 
 function Quiz(props) {
   let questions = props.questions
-  let data = props.data
+  const objetoSerializado = localStorage.getItem("HerbertData");
+  const data = JSON.parse(objetoSerializado)[0];
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswer, setUserAnswer] = useState(null);
 

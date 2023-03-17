@@ -9,6 +9,7 @@ import Quiz from './pages/Quiz';
 import Disciplina from './pages/Disciplina';
 import Conteudo from './pages/Conteudo';
 import Eventos from './pages/Eventos';
+import Configurações from './pages/Configurações';
 
 // Firebase
 import firebase from "firebase/compat/app";
@@ -174,6 +175,10 @@ const router = createBrowserRouter([
   {
     path: "Eventos",
     element: <Eventos base={firebase}/>
+  },
+  {
+    path: "Configuracao",
+    element: <Configurações base={firebase}/>
   }
 ]);
 

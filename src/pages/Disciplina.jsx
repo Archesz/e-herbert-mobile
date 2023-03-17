@@ -6,7 +6,8 @@ import Menu from '../components/Menu/Menu'
 
 function Disciplina(props){
 
-    let data = props.data
+    const objetoSerializado = localStorage.getItem("HerbertData");
+    const data = JSON.parse(objetoSerializado)[0];
     // let assuntos = Object.keys(data["Conteudos"])
 
     let disciplina = localStorage.getItem("Disciplina")

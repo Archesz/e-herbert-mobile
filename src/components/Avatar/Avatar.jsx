@@ -31,7 +31,7 @@ function Avatar(props) {
             {isOpen && (
                 <ul className="menu">
                     <li onClick={() => goTo("Perfil")}>Perfil</li>
-                    <li>Configurações</li>
+                    <li onClick={() => goTo("Configuracao")}>Configurações</li>
                     <li>Sair</li>
                 </ul>
             )}

@@ -1,0 +1,45 @@
+.configuracoes-container{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+    padding: 100px 20px;   
+
+    .configuracoes-field{
+        width: 100%;
+        height: auto;
+        background-color: var(--black);
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 4px 4px 6px black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        .input-group{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            .label{
+                font-weight: bold;
+                font-size: 18px;
+                color: var(--grey-200);
+            }
+
+            input{
+                padding-left: 2.5em;
+                height: 40px;
+                width: 100%;
+                border-radius: 4px;
+                font-size: 14px;
+                background-color: var(--background);
+                border: none;
+                color: var(--grey-200);
+            }
+        }
+    }
+
+}
