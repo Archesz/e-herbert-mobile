@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/eventos.scss'
 import Menu from '../components/Menu/Menu'
 import Evento from '../components/Evento/Evento'
@@ -24,10 +24,18 @@ function Eventos(props) {
     const objetoSerializado = localStorage.getItem("HerbertData");
     const data = JSON.parse(objetoSerializado)[0];
 
+    const [search, setSearch] = useState("")
+
     return (
         <div className='eventos-container'>
 
             <Menu data={data}/>
+
+            <div className='eventos-header'>
+
+                <input placeholder='Buscar evento'/>
+
+            </div>
 
             <span className='eventos-text'>Acontecendo agora &#x1F525;</span>
 

@@ -4,6 +4,11 @@ import '../styles/disciplina.scss'
 import Assunto from '../components/Assunto/Assunto'
 import Menu from '../components/Menu/Menu'
 
+const professores = [
+    {"Nome": "Jovi", "Foto": "https://pps.whatsapp.net/v/t61.24694-24/323807984_895529844989283_6961357159995897617_n.jpg?ccb=11-4&oh=01_AdQZ-ElOFqgPgYoI3J03OpLxcWDYRJhV6pGaYa71tm8FTQ&oe=6423158D"},
+    {"Nome": "Profeta", "Foto": "https://pps.whatsapp.net/v/t61.24694-24/295008300_421349299965232_2711014818918594560_n.jpg?ccb=11-4&oh=01_AdQbuJOPIQvQsTqqFgd5JkTLuIc7HBUbOl5p7GWlsVgAqw&oe=64230BBD"}
+]
+
 function Disciplina(props){
 
     const objetoSerializado = localStorage.getItem("HerbertData");
@@ -40,8 +45,18 @@ function Disciplina(props){
                 <div className='disciplina-welcome'>
                     <span className='disciplina-title'>{disciplina}</span>
                     <span className='disciplina-subtitle'>A ciência da lógica e dos números!</span>                
+                    <span className='disciplina-professores'>Professores:</span>
+
+                    <div className='professores'>
+                        {professores.map((professor) => {
+                            return(
+                                <img src={professor["Foto"]} className='professor-avatar' alt={professor}/>
+                            )
+                        })}
+                    </div>
                 </div>
 
+                <span className='intro'></span>
 
                 <div className='assuntos'>
                     {assuntos.map((assunto, index) => {

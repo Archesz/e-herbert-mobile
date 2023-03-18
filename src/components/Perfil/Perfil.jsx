@@ -3,6 +3,7 @@ import './Perfil.scss'
 
 import {TbBrandInstagram, TbBrandWhatsapp} from 'react-icons/tb'
 import {TiSocialTwitter} from 'react-icons/ti'
+import Nivel from '../Nivel/Nivel'
 
 function goToLink(link){
     window.open(link, "_blank")
@@ -29,7 +30,9 @@ function Perfil(props) {
             <div className='perfil-top'>
                 <div className='perfil-badge'>Estudante</div>
 
-                <img src={urlfoto} className='perfil-photo' alt='Foto de Perfil'/>
+                <img src={urlfoto} className='perfil-photo' alt='Foto de Perfil'/> 
+
+                <Nivel nivel={99} area={data["Area"]}/>
 
                 <div className='perfil-infos'>
                     <span className='perfil-name'>{data["Primeiro Nome"]}</span>

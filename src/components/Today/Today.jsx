@@ -18,9 +18,8 @@ function Today() {
 
             <div className='today-content'>
 
-                <div>
-                    <span className='today-name'>Herbert Today</span>
-                    <span className='today'>{dia}</span>
+                <div className='today-row'>
+                    <span className='today-name'>Herbert Today - {dia}</span>
                 </div>
 
                 <div className='aulas'>
