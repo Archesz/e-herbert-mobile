@@ -1,4 +1,4 @@
-.conquista-container{
+.conquista-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,12 +10,12 @@
     border-radius: 4px;
     box-shadow: 4px 4px 6px black;
 
-    .icon{
+    .icon {
         width: 32px;
         filter: invert(1);
     }
 
-    .conquista-icon{
+    .conquista-icon {
         width: 60px;
         height: 60px;
         background-color: var(--white);
@@ -24,10 +24,54 @@
         box-shadow: 4px 4px 6px black;
     }
 
-    .conquista-name{
+    .conquista-name {
         font-weight: bold;
         font-size: 12px;
         color: var(--white);
         margin-top: 14px;
     }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    padding: 0 20px;
+}
+
+.modal-content {
+    background-color: var(--white);
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 4px 4px 6px black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .modal-name{
+        font-size: 20px;
+        color: var(--black);
+        font-weight: bolder;
+    }
+
+    .modal-text{
+        color: var(--black);
+    }
+}
+
+.badge {
+    width: 100px;
+    height: 100px;
 }

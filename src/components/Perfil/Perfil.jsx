@@ -1,22 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Perfil.scss'
 
 import {TbBrandInstagram, TbBrandWhatsapp} from 'react-icons/tb'
 import {TiSocialTwitter} from 'react-icons/ti'
 
 function goToLink(link){
-    window.location.href(link, "_blank")
+    window.open(link, "_blank")
 }
 
 function Perfil(props) {
     
     let data = props.data
+
+    // Verificando se existe foto.
     let urlfoto = ""
+
     if(data["URLFoto"] == ""){
         urlfoto = "https://dev.promoview.com.br/uploads/2017/04/b72a1cfe.png"
     } else{
         urlfoto = data["URLFoto"]
     }
+
+    const [isConfig, setIsConfig] = useState(props.config);
 
     return (
         <div className='perfil-container'>
@@ -49,7 +54,9 @@ function Perfil(props) {
 
                 </div>
 
-                <button className='btn-perfil' onClick={() => {window.location.assign("./Perfil")}}>Perfil Completo</button>
+                {!isConfig && (
+                    <button className='btn-perfil' onClick={() => {window.location.assign("./Perfil")}}>Perfil Completo</button>
+                )}
 
             </div>
 

@@ -29,7 +29,7 @@ function Home(props) {
             <div className='home-perfil-background'></div>
 
             <div className='home-perfil'>
-                <Perfil data={data}/>
+                <Perfil data={data} config={false}/>
 
             </div>
 

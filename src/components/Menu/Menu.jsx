@@ -56,20 +56,6 @@ function MobileMenu(props) {
       )}
 
       <ul className={`mobile-menu-items ${isOpen ? 'open' : ''}`}>
-        <div className='mobile-menu-perfil'>
-
-          <div className='row'>
-            <img src={data["URLFoto"]} alt="" className='avatar-foto' />
-            <div className='perfil-infos'>
-              <span className='perfil-name'>{data["Primeiro Nome"]}</span>
-              <span className='perfil-subname'>{data["Apelido"]}</span>
-            </div>
-          </div>
-
-          <TbEdit className='btn-edit' />
-
-        </div>
-
         {menuItems.map((item, index) => (
           <li key={index}>
             <a href={item.url}>{item.label}</a>

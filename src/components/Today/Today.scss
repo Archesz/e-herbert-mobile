@@ -1,17 +1,32 @@
 .today-container{
     width: 100%;
     background-color: var(--black);
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 12px;
     align-items: flex-start;
     cursor: pointer;
     box-shadow: 4px 4px 10px black;
 
+    .today-image{
+        height: 150px;
+        width: 100%;
+        background-image: url('../../assets/Imagens/todaybackground.jpg');
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .today-content{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
     .today-name{
         font-weight: bolder;
-        font-size: 20px;
+        font-size: 16px;
         color: var(--red);
     }
 

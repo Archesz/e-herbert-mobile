@@ -8,6 +8,21 @@
     background-color: var(--background);
     padding: 100px 20px;
 
+    .home-perfil-background{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 240px;
+        background-color: var(--red);
+        left: 0;
+        z-index: 10;
+    }
+
+    .home-perfil{
+        width: 100%;
+        z-index: 20;
+    }
+
     .conquistas-container{
         display: flex;
         flex-direction: column;
@@ -21,9 +36,21 @@
         color: white;
         gap: 14px;
 
-        .conquistas-text{
-            font-weight: bolder;
-            font-size: 20px;
+        .conquista-header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon-plus{
+                color: var(--grey-100);
+            }
+
+            .conquistas-text{
+                font-weight: bolder;
+                font-size: 20px;
+                color: var(--grey-100);
+            }
         }
 
         .conquistas-row{
@@ -51,6 +78,8 @@
             flex-direction: row;
             padding: 0 20px;
             align-items: center;
+            box-shadow: 4px 4px 6px black;
+            border-radius: 12px;
 
             .card-left{
                 width: 70%;

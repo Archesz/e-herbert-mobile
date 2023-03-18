@@ -7,6 +7,10 @@ import logo from '../assets/logo.png'
 // Icones
 import {MdEmail, MdLock} from 'react-icons/md'
 
+function recoverPassword(){
+    alert("A recuperação de senha ainda está em construção, por favor contate o projeto pelo whatsapp.")
+}
+
 function Login(props) {
 
     function entrar(){
@@ -77,7 +81,7 @@ function Login(props) {
                         <input type="password" className='login-input' placeholder='Senha' id="login-password" autocomplete="off"/>
                     </div>
 
-                    <span className='help-text'>Esqueci minha senha</span>
+                    <span className='help-text' onClick={recoverPassword}>Esqueci minha senha</span>
 
                 </div>
 
@@ -85,7 +89,7 @@ function Login(props) {
 
                 <div className='divisor'/>
 
-                <span className='help-phrase'>O projeto está na versão <span className='text-warning'>Alfa (Ver 0.0.8)</span>.</span>
+                <span className='help-phrase'>O projeto está na versão <span className='text-warning'>Alfa (Ver 0.0.9)</span>.</span>
 
             </div>
 

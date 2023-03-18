@@ -13,21 +13,29 @@ const aulas = [
 function Today() {
     return (
         <div className='today-container'>
+            
+            <div className='today-image'/>
 
-            <span className='today-name'>Herbert Today</span>
-            <span className='today'>{dia}</span>
+            <div className='today-content'>
 
-            <div className='aulas'>
-                {aulas.map((aula) => {
-                    return(
-                        <div className='aula'>
-                            <span className='aula-name'>{aula["Disciplina"]}</span>
-                            <span title={aula["Assunto"]} className='aula-assunto' alt={aula["Assunto"]}>{aula["Assunto"]}</span>
-                        </div>
-                    )
-                })}
+                <div>
+                    <span className='today-name'>Herbert Today</span>
+                    <span className='today'>{dia}</span>
+                </div>
+
+                <div className='aulas'>
+                    {aulas.map((aula) => {
+                        return(
+                            <div className='aula'>
+                                <span className='aula-name'>{aula["Disciplina"]}</span>
+                                <span title={aula["Assunto"]} className='aula-assunto' alt={aula["Assunto"]}>{aula["Assunto"]}</span>
+                            </div>
+                        )
+                    })}
+                </div>
+
+
             </div>
-
         </div>
     )
 }
