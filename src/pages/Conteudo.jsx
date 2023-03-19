@@ -10,14 +10,15 @@ import ConteudoView from '../components/ConteudoView/ConteudoView'
 
 function Conteudo(props) {
     const objetoSerializado = localStorage.getItem("HerbertData");
-    const data = JSON.parse(objetoSerializado)[0];
+    const user = JSON.parse(objetoSerializado)[0];
     
+    const data = props.data
     const [type, setType] = useState("Material")
 
     return (
         <div className='conteudo-container-screen'>
 
-            <Menu data={data}/>
+            <Menu data={user}/>
 
             <div className='conteudo-col'>
                 

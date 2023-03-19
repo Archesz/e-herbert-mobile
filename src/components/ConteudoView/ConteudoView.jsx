@@ -9,7 +9,7 @@ function goTo(link){
 
 function ConteudoView(props) {
 
-    if(props.type === "Material"){
+    if(props.type === "Material"){  
         return (
             <div className='conteudoView-container'>
                 <span className='conteudoView-name'>{props.name}</span>

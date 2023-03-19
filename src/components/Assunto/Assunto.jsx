@@ -14,7 +14,6 @@ function goToMateria(materia){
 
 function Assunto(props) {
     let data = props.conteudos
-    let materia = props.materia
 
     return (
         <div className='assunto-container'>

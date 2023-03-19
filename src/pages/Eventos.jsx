@@ -26,35 +26,44 @@ function Eventos(props) {
 
     const [search, setSearch] = useState("")
 
+    function changeSearch(){
+        let value = document.querySelector("#eventosFilter").value
+        setSearch(value)
+    }
+
     return (
         <div className='eventos-container'>
 
             <Menu data={data}/>
 
             <div className='eventos-header'>
-
-                <input placeholder='Buscar evento'/>
+                <span className='eventos-name'>Eventos e Cursos</span>
+                <input placeholder='Buscar evento' onChange={() => {changeSearch()}} id="eventosFilter" className='eventos-input'/>
 
             </div>
 
             <span className='eventos-text'>Acontecendo agora &#x1F525;</span>
 
             {eventosNow.map((evento) => {
-                return(
-                    <Evento nome={evento["Nome"]} data={evento["Data"]} foto={evento["Foto"]} tipo={evento["Tipo"]}
-                    descricao={evento["Descrição"]}
-                    />                    
-                )
+                if(evento["Nome"].includes(search) != false){
+                    return(
+                        <Evento nome={evento["Nome"]} data={evento["Data"]} foto={evento["Foto"]} tipo={evento["Tipo"]}
+                        descricao={evento["Descrição"]}
+                        />                    
+                    )
+                }
             })}
 
             <span className='eventos-text'>Em breve &#x1F4C5;</span>
 
             {eventosNext.map((evento) => {
-                return(
-                    <Evento nome={evento["Nome"]} data={evento["Data"]} foto={evento["Foto"]} tipo={evento["Tipo"]}
-                    descricao={evento["Descrição"]}
-                    />                    
-                )
+                if(evento["Nome"].includes(search) != false){
+                    return(
+                        <Evento nome={evento["Nome"]} data={evento["Data"]} foto={evento["Foto"]} tipo={evento["Tipo"]}
+                        descricao={evento["Descrição"]}
+                        />                    
+                    )
+                }
             })}
 
         </div>

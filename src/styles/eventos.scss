@@ -9,6 +9,29 @@
     background-color: var(--background);
     padding: 100px 20px;
 
+    .eventos-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        .eventos-name{
+            font-size: 24px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .eventos-input{
+            width: 100%;
+            height: 50px;
+            background-color: var(--black);
+            border: 2px solid var(--grey-500);
+            box-shadow: 4px 4px 6px black;
+            border-radius: 4px;
+            padding-left: 10px;
+        }
+    }
+
     .eventos-text{
         font-size: 30px;
         font-weight: bolder;
