@@ -32,7 +32,7 @@ function Perfil(props) {
 
                 <img src={urlfoto} className='perfil-photo' alt='Foto de Perfil'/> 
 
-                <Nivel nivel={99} area={data["Area"]}/>
+                <Nivel nivel={1} area={data["Area"]}/>
 
                 <div className='perfil-infos'>
                     <span className='perfil-name'>{data["Primeiro Nome"]}</span>

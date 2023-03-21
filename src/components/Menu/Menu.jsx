@@ -10,7 +10,7 @@ import Avatar from '../Avatar/Avatar';
 const menuItems = [
   { label: 'Home', url: '/Home' },
   { label: 'Eventos', url: '/Eventos' },
-  { label: 'Biblioteca', url: '/Home' },
+  { label: 'Biblioteca', url: '/Biblioteca' },
   { label: 'Quiz', url: '/Quiz' }
 ];
 

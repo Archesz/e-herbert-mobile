@@ -16,6 +16,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import Footer from './components/Footer/Footer';
 import PerfilConfig from './pages/PerfilConfig';
+import Biblioteca from './pages/Biblioteca';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDZc7R_-lLK9xKfa4_610JI7Izk4b831Xc",
@@ -50,19 +51,9 @@ const data = {
 
 const questions = [
   {
-    text: 'Qual é a capital do Brasil?',
-    options: ['Rio de Janeiro', 'São Paulo', 'Brasília', 'Belo Horizonte'],
-    answer: 'Brasília',
-  },
-  {
-    text: 'Qual é a cor do céu?',
-    options: ['Verde', 'Azul', 'Amarelo', 'Vermelho'],
-    answer: 'Azul',
-  },
-  {
-    text: 'Quem descobriu o Brasil?',
-    options: ['Pedro Álvares Cabral', 'Cristóvão Colombo', 'Bartolomeu Dias', 'Vasco da Gama'],
-    answer: 'Pedro Álvares Cabral',
+    "text": "Qual é o valor de x na equação 2x + 3 = 9?",
+    "options": ["x = 3", "x = 2", "x = 1", "x = 4"],
+    "answer": "x = 3"
   },
   {
     text:
@@ -121,6 +112,11 @@ const questions = [
     answer: 'A poluição pode causar a morte de algumas espécies no ecossistema',
   },
   {
+    "text": "Uma loja vende camisetas por R$ 30 cada. Se um cliente compra x camisetas, ele paga R$ 120 no total. Qual é o valor de x?",
+    "options": ["x = 2", "x = 3", "x = 4", "x = 5"],
+    "answer": "x = 4"
+  },
+  {
     text:
       'A genética é o estudo dos genes e hereditariedade. Com base nesse estudo, explique a diferença entre dominância completa e co-dominância em um cruzamento genético.',
     options: [
@@ -131,6 +127,11 @@ const questions = [
     ],
     answer:
       'Dominância completa é quando apenas um alelo é expresso, enquanto a co-dominância é quando os dois alelos são expressos igualmente',
+  },
+  {
+    "text": "Qual foi a invasão que marcou o início da Segunda Guerra Mundial na Europa?",
+    "options": ["Invasão da Polônia", "Invasão da França", "Invasão da União Soviética", "Invasão da Bélgica"],
+    "answer": "Invasão da Polônia"
   }
 ];
 
@@ -175,6 +176,10 @@ const router = createBrowserRouter([
   {
     path: "Eventos",
     element: <Eventos base={firebase}/>
+  },
+  {
+    path: "Biblioteca",
+    element: <Biblioteca base={firebase}/>
   },
   {
     path: "Configuracao",

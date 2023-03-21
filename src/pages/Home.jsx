@@ -10,6 +10,7 @@ import '../styles/home.scss'
 import Today from '../components/Today/Today'
 import Perfil from '../components/Perfil/Perfil'
 import Footer from '../components/Footer/Footer'
+import Research from '../components/Research/Research'
 
 function goToDisciplina(disciplina){
     localStorage.setItem("Disciplina", disciplina);
@@ -57,7 +58,7 @@ function Home(props) {
             <div className='home-cards'>
                 <News />
                 <Today />
-
+                <Research />
             </div>
         </div>
     )
