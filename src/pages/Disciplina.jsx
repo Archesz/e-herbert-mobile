@@ -13,26 +13,34 @@ function Disciplina(props){
 
     const objetoSerializado = localStorage.getItem("HerbertData");
     const data = JSON.parse(objetoSerializado)[0];
-    // let assuntos = Object.keys(data["Conteudos"])
 
     let disciplina = localStorage.getItem("Disciplina")
 
     const [conteudo, setConteudo] = useState([])
     const [assuntos, setAssuntos] = useState([])
+    const [professores, setProfessores] = useState([])
+    const [frase, setFrase] = useState()
 
     useEffect(() => {
         const usuariosRef = props.base.database().ref(`disciplinas/${disciplina}`);
+
         usuariosRef.on("value", (snapshot) => {
             let conteudos = snapshot.val();
             let conteudosArray = []
 
             let keys = Object.keys(conteudos["Conteudos"])
+            let frase = conteudos["Frase"]
 
-            for (let i = 0; i != keys.length; i++){
+            let professores = Object.keys(conteudos["Professores"])
+            
+            for (let i = 0; i !== keys.length; i++){
                 conteudosArray[keys[i]] = conteudos["Conteudos"][keys[i]]
             }
+
             setConteudo(conteudosArray)
             setAssuntos(keys)
+            setProfessores(professores)
+            setFrase(frase)
         });
     }, []);
 
@@ -44,19 +52,46 @@ function Disciplina(props){
 
                 <div className='disciplina-welcome'>
                     <span className='disciplina-title'>{disciplina}</span>
-                    <span className='disciplina-subtitle'>A ciência da lógica e dos números!</span>                
+                    <span className='disciplina-subtitle'>{frase}</span>    
+                               
                     <span className='disciplina-professores'>Professores:</span>
 
                     <div className='professores'>
                         {professores.map((professor) => {
                             return(
-                                <img src={professor["Foto"]} className='professor-avatar' alt={professor}/>
+                                <div className='disciplina-professor'>
+                                    <img src="" className='professor-avatar'/>
+                                    <span className='professor-nome'>{professor}</span>
+                                </div>
                             )
                         })}
                     </div>
                 </div>
 
                 <span className='intro'></span>
+                        
+                <div className='assuntos'>
+
+                    {assuntos.map((assunto, index) => {
+                        return(
+                            <div key={index}>
+                                
+                                <Assunto nome={assunto} conteudos={conteudo[assunto]} materia={disciplina}/>
+                                    
+                            </div> 
+                        )
+                    })}
+
+                </div>
+            </div>            
+
+        </div>
+    )
+}
+
+export default Disciplina
+
+/*
 
                 <div className='assuntos'>
                     {assuntos.map((assunto, index) => {
@@ -70,10 +105,5 @@ function Disciplina(props){
                     })}
                 </div>
 
-            </div>            
 
-        </div>
-    )
-}
-
-export default Disciplina
+*/

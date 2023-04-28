@@ -25,7 +25,6 @@
     .disciplina-welcome{
         margin-top: 40px;
         height: auto;
-        margin-bottom: 20px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -48,7 +47,7 @@
             font-weight: bolder;
             font-size: 18px;
             color: white;
-            margin-top: 12px;
+            margin-top: 16px;
         }
 
         .professores{
@@ -57,15 +56,26 @@
             flex-wrap: wrap;
             gap: 14px;
             width: 100%;
-            margin-top: 12px;
+            margin-top: 16px;
             align-items: center;
             justify-content: center;
 
-            .professor-avatar{
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
+            .disciplina-professor{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                
+                .professor-avatar{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
+                }
+
+                .professor-nome{
+                    color: var(--white)
+                }
             }
         }
     }

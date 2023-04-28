@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import './Assunto.scss'
 
-import {VscGraphLine} from 'react-icons/vsc'
-
-const iconsMap = {
-    "Estatística": <VscGraphLine className='icon-materia'/>
-}
-
 function goToMateria(materia){
     localStorage.setItem("Materia", materia);
     window.location.assign("/Conteudo")
@@ -14,23 +8,23 @@ function goToMateria(materia){
 
 function Assunto(props) {
     let data = props.conteudos
-
+    console.log(data)
     return (
         <div className='assunto-container'>
             
             <div className='assunto-header'>
-                {iconsMap[props.nome]}
                 <span className='assunto-name'> {props.nome}</span> 
             </div>
 
     
             <div className='assunto-resumo'>
-                Estatística é a disciplina que se dedica à coleta, análise e interpretação de dados. Ela permite entender e descrever fenômenos aleatórios, fazer previsões e tomar decisões baseadas em evidências.
+                Aqui deve ir um texto com a descrição resumida do assunto.
             </div>
 
             <span className='conteudo-call'>Conteudo</span>
 
             <div className='assunto-row'>
+
                 {data.map((conteudo) => {
                     return(
                         <div className='conteudo-container' onClick={() => {goToMateria(`${conteudo}`)}}>
@@ -38,6 +32,7 @@ function Assunto(props) {
                         </div>
                     )
                 })}
+
             </div>
 
         </div>
@@ -45,3 +40,13 @@ function Assunto(props) {
 }
 
 export default Assunto
+
+/* 
+                {data.map((conteudo) => {
+                    return(
+                        <div className='conteudo-container' onClick={() => {goToMateria(`${conteudo}`)}}>
+                            <span className='conteudo'>{conteudo}</span>
+                        </div>
+                    )
+                })}
+*/
