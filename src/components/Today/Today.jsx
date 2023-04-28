@@ -5,9 +5,9 @@ const hoje = new Date();
 const dia = hoje.toLocaleDateString();
 
 const aulas = [
-    {"Disciplina": "Biologia", "Assunto": "Sem assunto determinado."},
-    {"Disciplina": "Matemática", "Assunto": "Equação de 2º Grau."},
-    {"Disciplina": "Socio/Filo", "Assunto": "Sem assunto determinado."}
+    {"Disciplina": "Física", "Assunto": "-"},
+    {"Disciplina": "Matemática", "Assunto": "Alberto"},
+    {"Disciplina": "Física", "Assunto": "Rosa"}
 ]
 
 function Today() {
@@ -19,7 +19,7 @@ function Today() {
             <div className='today-content'>
 
                 <div className='today-row'>
-                    <span className='today-name'>Herbert Today - {dia}</span>
+                    <span className='today-name'>Aulas do Dia - {dia}</span>
                 </div>
 
                 <div className='aulas'>

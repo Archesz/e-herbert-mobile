@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './News.scss'
 
 const data = [
-  { "Nome": "UERJ 2024: último dia para solicitar a isenção da taxa do Vestibular", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/vestibular-uerj-2024-ultimo-dia-para-pedir-isencao-da-taxa-de-inscricao/354320.html", "Data": "17/03/2023", "Hora": "11:00" },
-  { "Nome": "ENEM 2023: confira como conseguir a isenção da taxa de inscrição", "Link": "https://vestibular.brasilescola.uol.com.br/enem/enem-2023-confira-como-conseguir-a-isencao-da-taxa-de-inscricao/354323.html", "Data": "17/03/2023", "Hora": "12:45" },
-  { "Nome": "Datas do Vestibulinho 2023/2 das Etecs (SP) são liberadas", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/etecs-sp-datas-do-vestibulinho-2023-2-sao-publicadas/354322.html", "Data": "17/03/2023", "Hora": "14:00" },
+  { "Nome": "Mutirão de Limpeza da Sala Dandara (29/04)", "Link": "", "Data": "27/04/2023", "Hora": "12:00" },
+  { "Nome": "Último dia para pedidos de Isenção do Enem", "Link": "https://educacao.uol.com.br/noticias/2023/04/28/enem-candidatos-tem-ate-esta-sexta-feira-para-pedir-isencao-de-taxa.htm", "Data": "28/04/2023", "Hora": "12:45" },
+  { "Nome": "Projeto 'Meninas Super Cientistas abre inscrições'", "Link": "https://www.ime.unicamp.br/meninassupercientistas/", "Data": "29/04/2023", "Hora": "14:00" },
 ];
 
 function News() {
@@ -41,7 +41,7 @@ function News() {
 
       <div className='news-content'>
 
-        <span className='news-name'>HerbertNews</span>
+        <span className='news-name'>Herbert News</span>
 
         <a className='news-title' href={data[currentDataIndex].Link}>
           {data[currentDataIndex].Nome}

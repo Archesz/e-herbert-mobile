@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import './Research.scss'
 
 const data = [
-    { "Nome": "Unicamp vence competição Nacional de Computação em 1º e 3º Lugar!", "Link": "https://vestibular.brasilescola.uol.com.br/noticias/vestibular-uerj-2024-ultimo-dia-para-pedir-isencao-da-taxa-de-inscricao/354320.html", "Data": "17/03/2023", "Hora": "11:00" },
-    { "Nome": "Nova Inteligência Artificial ChatGPT 4.0 está em funcionamento a partir do dia 21/03", "Link": "https://vestibular.brasilescola.uol.com.br/enem/enem-2023-confira-como-conseguir-a-isencao-da-taxa-de-inscricao/354323.html", "Data": "17/03/2023", "Hora": "12:45" },
-    { "Nome": "Cientistas conseguem utilizar Redes Neurais artificiais para simular o processo de crescimento humano!","Link": ""}
+    { "Nome": "IC Unicamp: Inteligência Artificial capaz de reconhecer abusos sexuais infantil", "Link": "", "Data": "28/05/2023", "Hora": "12:45" },
+    { "Nome": "Brasileiras ganham medalha nas Olimpiadas Feminina de Matemática da Europa (EMGO)!", "Link": "", "Data": "28/05/2023", "Hora": "11:00" },
+    { "Nome": "Modelo capaz de prever futuros casos de Alzheimer entrará em uso no HC da UNICAMP e Albert Einstein.!", "Link": "", "Data": "28/05/2023", "Hora": "11:00" },
+
 ];
 
 function Research() {
