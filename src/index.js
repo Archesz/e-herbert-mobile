@@ -17,6 +17,7 @@ import "firebase/compat/database";
 import Footer from './components/Footer/Footer';
 import PerfilConfig from './pages/PerfilConfig';
 import Biblioteca from './pages/Biblioteca';
+import Complete from './pages/Complete';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDZc7R_-lLK9xKfa4_610JI7Izk4b831Xc",
@@ -178,6 +179,10 @@ const router = createBrowserRouter([
   {
     path: "Configuracao",
     element: <Configurações base={firebase} />
+  },
+  {
+    path: "Complete",
+    element: <Complete base={firebase} />
   }
 ]);
 

@@ -27,14 +27,13 @@ function Login(props) {
                 const usuarios = snapshot.val();   
                 const data = []
                 for(let key in usuarios){
-                    console.log(usuarios)
                     if(usuarios[key]["ID"] === user && usuarios[key]["Senha"] === password){
                         data.push(usuarios[key]);
                     } 
                 }
 
                 localStorage.setItem("HerbertData", JSON.stringify(data));
-
+                
                 window.location.assign("/Home")    
             });
         } else if(user.substring(0, 4) == ("HS23")){
@@ -45,14 +44,18 @@ function Login(props) {
                 const usuarios = snapshot.val();   
                 const data = []
                 for(let key in usuarios){
-                    console.log(usuarios)
                     if(usuarios[key]["ID"] === user && usuarios[key]["Senha"] === password){
                         data.push(usuarios[key]);
                     } 
                 }
+                console.log(data[0]["Complete"])
                 localStorage.setItem("HerbertData", JSON.stringify(data));
 
-                window.location.assign("/Home")    
+                if(data[0]["Complete"] == false){
+                    window.location.assign("/Complete")
+                } else{
+                    window.location.assign("/Home")  
+                }
             });
         }
     }
