@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './News.scss'
 
 const data = [
-  { "Nome": "Mutirão de Limpeza da Sala Dandara (29/04)", "Link": "", "Data": "27/04/2023", "Hora": "12:00" },
-  { "Nome": "Último dia para pedidos de Isenção do Enem", "Link": "https://educacao.uol.com.br/noticias/2023/04/28/enem-candidatos-tem-ate-esta-sexta-feira-para-pedir-isencao-de-taxa.htm", "Data": "28/04/2023", "Hora": "12:45" },
-  { "Nome": "Projeto 'Meninas Super Cientistas abre inscrições'", "Link": "https://www.ime.unicamp.br/meninassupercientistas/", "Data": "29/04/2023", "Hora": "14:00" },
+  { "Nome": "Fuvest pretende iniciar o modelo de ingreso através da análise do ensino médio.", "Link": "", "Data": "08/07/2023", "Hora": "09:00" },
+  { "Nome": "Unicamp de Portas Abertas (UPA) ocorrerá em 19/08", "Link": "https://educacao.uol.com.br/noticias/2023/04/28/enem-candidatos-tem-ate-esta-sexta-feira-para-pedir-isencao-de-taxa.htm", "Data": "08/07/2023", "Hora": "09:00" },
+  { "Nome": "Projeto 'Meninas Super Cientistas abre inscrições'", "Link": "https://www.ime.unicamp.br/meninassupercientistas/", "Data": "08/07/2023", "Hora": "09:00" },
 ];
 
 function News() {

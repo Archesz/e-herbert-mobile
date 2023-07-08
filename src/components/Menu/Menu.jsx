@@ -11,7 +11,8 @@ const menuItems = [
   { label: 'Home', url: '/Home' },
   { label: 'Eventos', url: '/Eventos' },
   { label: 'Biblioteca', url: '/Biblioteca' },
-  { label: 'Quiz', url: '/Quiz' }
+  { label: 'Quiz', url: '/Quiz' },
+  { label: "Análise", url: "/Análise"}
 ];
 
 function MobileMenu(props) {

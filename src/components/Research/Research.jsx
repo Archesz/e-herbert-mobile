@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import './Research.scss'
 
 const data = [
-    { "Nome": "IC Unicamp: Inteligência Artificial capaz de reconhecer abusos sexuais infantil", "Link": "", "Data": "28/05/2023", "Hora": "12:45" },
-    { "Nome": "Brasileiras ganham medalha nas Olimpiadas Feminina de Matemática da Europa (EMGO)!", "Link": "", "Data": "28/05/2023", "Hora": "11:00" },
-    { "Nome": "Modelo capaz de prever futuros casos de Alzheimer entrará em uso no HC da UNICAMP e Albert Einstein.!", "Link": "", "Data": "28/05/2023", "Hora": "11:00" },
+    { "Nome": "IC Unicamp: Unicamp recebe o primeiro Cluster Multi-FPGA do Brasil;", "Link": "", "Data": "08/07/2023", "Hora": "12:45" },
+    { "Nome": "Como funciona o ChatGPT e os Transformers? O Fim vai chegar?", "Link": "", "Data": "08/07/2023", "Hora": "11:00" },
+    { "Nome": "Modelo que mapeia e caracteriza Covid no pulmão é premiado na Unicamp.", "Link": "", "Data": "08/07/2023", "Hora": "11:00" },
 
 ];
 

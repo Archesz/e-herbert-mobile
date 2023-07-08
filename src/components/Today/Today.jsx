@@ -5,9 +5,9 @@ const hoje = new Date();
 const dia = hoje.toLocaleDateString();
 
 const aulas = [
-    {"Disciplina": "Física", "Assunto": "-"},
-    {"Disciplina": "Matemática", "Assunto": "Alberto"},
-    {"Disciplina": "Física", "Assunto": "Rosa"}
+    {"Disciplina": "Sem aulas hoje", "Assunto": "-"},
+    {"Disciplina": "Sem aulas hoje", "Assunto": "-"},
+    {"Disciplina": "Sem aulas hoje", "Assunto": "-"}
 ]
 
 function Today() {
