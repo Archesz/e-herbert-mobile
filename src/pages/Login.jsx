@@ -70,7 +70,7 @@ function Login(props) {
 
             <div className='login-field'>
 
-                <span className='login-title'>Acessar como Herbertiano!</span>
+                <span className='login-title'>Acessar a Plataforma!</span>
 
                 <div className='input-area'>
 
