@@ -25,7 +25,7 @@ function Disciplinas() {
             <div className='disciplinas'>
 
                 <span className='disciplinas-title'>Disciplinas</span>
-
+                <span className='disciplinas-explain'>Como versão teste 1, as disciplinas ainda não estão totalmente linkadas com os conteúdos, isso irá ocorrer na próxima atualização! No momento, verifiquem o layout e como funcionará clicando em qualquer uma.</span>
                 <div className='disciplinas'>
                     <DisciplinaIcon materia="Matemática" icon={<TbMathFunction className='icon'/>} color="red" onClick={() => {goToDisciplina("Matemática")}}/>
                     <DisciplinaIcon materia="Física" icon={<TbAtom className='icon'/>} color="green" onClick={() => {goToDisciplina("Física")}}/>
@@ -46,12 +46,6 @@ function Disciplinas() {
             <div className='disciplinas'>
 
                 <span className='disciplinas-title'>Extras e Complementos</span>
-
-                <div className='disciplinas'>
-                    <DisciplinaIcon materia="Atualidades" icon={<TbMathFunction className='icon'/>} color="red" onClick={() => {goToDisciplina("Matemática")}}/>
-                    <DisciplinaIcon materia="Computação" icon={<TbAtom className='icon'/>} color="green" onClick={() => {goToDisciplina("Física")}}/>
-                    <DisciplinaIcon materia="Guia do Estudo" icon={<GiErlenmeyer className='icon'/>} color="green" onClick={() => {goToDisciplina("Química")}}/>
-                </div>
 
             </div>
 
