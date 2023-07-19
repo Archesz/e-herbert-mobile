@@ -3,6 +3,7 @@ import '../styles/disciplina.scss'
 
 import Assunto from '../components/Assunto/Assunto'
 import Menu from '../components/Menu/Menu'
+import Navmenu from '../components/Navmenu/Navmenu'
 
 const professores = [
     {"Nome": "Jovi", "Foto": "https://pps.whatsapp.net/v/t61.24694-24/323807984_895529844989283_6961357159995897617_n.jpg?ccb=11-4&oh=01_AdQZ-ElOFqgPgYoI3J03OpLxcWDYRJhV6pGaYa71tm8FTQ&oe=6423158D"},
@@ -84,6 +85,8 @@ function Disciplina(props){
 
                 </div>
             </div>            
+
+            <Navmenu />
 
         </div>
     )

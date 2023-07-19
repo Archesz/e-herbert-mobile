@@ -65,29 +65,19 @@ function Quiz(props) {
           <select className='input-select'>
             <option value="">Selecione a Disciplina</option>
             <option value="">Geral</option>
-            <option value="">Matemática</option>
-            <option value="">Física</option>
-            <option value="">Química</option>
-            <option value="">Biologia</option>
           </select>
         </div>
 
         <div className='input-group'>
           <select className='input-select'>
             <option value="">Selecione o Nível</option>
-            <option value="">Iniciante</option>
             <option value="">Intermediário</option>
-            <option value="">Difícil</option>
-            <option value="">Avançado</option>
           </select>
         </div>
 
         <div className='input-group'>
           <select className='input-select'>
             <option value="">Selecione o Estilo</option>
-            <option value="">Unicamp</option>
-            <option value="">USP</option>
-            <option value="">Enem</option>
             <option value="">Geral</option>
           </select>
         </div>

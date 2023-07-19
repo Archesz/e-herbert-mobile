@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import DisciplinaIcon from '../components/DisciplinaIcon/DisciplinaIcon'
 import Menu from '../components/Menu/Menu'
+import Navmenu from '../components/Navmenu/Navmenu'
 
 import '../styles/conteudo.scss'
 
@@ -36,6 +37,8 @@ function Conteudo(props) {
                 <ConteudoView type={type} name={type} data={data}/>
 
             </div>
+
+            <Navmenu />
 
         </div>
     )

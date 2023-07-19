@@ -52,7 +52,7 @@ function Login(props) {
                 localStorage.setItem("HerbertData", JSON.stringify(data));
                 
                 if(data[0]["Complete"] == false){
-                    window.location.assign("/Complete")
+                    window.location.assign("/Home")  
                 } else{
                     window.location.assign("/Home")  
                 }
