@@ -67,10 +67,14 @@ function Login(props) {
                 <img src={logo} alt="Logo de Imagem" className='logo-img'/>
                 <span className='logo-text'>Cursinho Popular Herbert de Souza</span>
             </div>
+            
+            <div className='img-login'>
+
+            </div>
 
             <div className='login-field'>
 
-                <span className='login-title'>Acessar a Plataforma!</span>
+                <span className='login-title'>Login</span>
 
                 <div className='input-area'>
 
@@ -92,7 +96,7 @@ function Login(props) {
 
                 <div className='divisor'/>
 
-                <span className='help-phrase'>O projeto está na versão <span className='text-warning'>Alfa (Ver 0.0.9)</span>.</span>
+                <span className='help-phrase'>Desenvolvido por <span className='text-warning'>@Archs</span>.</span>
 
             </div>
 

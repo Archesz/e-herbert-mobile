@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/configuracao.scss'
 import Menu from '../components/Menu/Menu'
+import Navmenu from '../components/Navmenu/Navmenu';
 
 function Configurações(props) {
 
@@ -77,6 +78,7 @@ function Configurações(props) {
 
             </div>
 
+            <Navmenu />
 
         </div>
     )

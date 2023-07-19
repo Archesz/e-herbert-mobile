@@ -1,0 +1,83 @@
+.planner-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 100%;
+    
+    .planner-area{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .planner-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bolder;
+            font-size: 18px;
+        }
+    
+        .planner-disciplina{
+            border: 1px solid var(--grey-200);
+            border-radius: 4px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .disciplina-name{
+                color: var(--white);
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .disciplina-theme{
+                font-size: 15px;
+                color: var(--white);
+                margin-top: 8px;
+                border-bottom: 1px solid var(--white);
+                padding-bottom: 6px;
+            }
+
+            .disciplina-assunto{
+                margin-top: 6px;
+                color: var(--white);
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .assunto-check{
+                margin-top: 6px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                span{
+                    margin-left: 8px;
+                    color: var(--white);
+                }
+            }
+        }
+    
+    }
+}
+
+.math{
+    background-color: #D80032;
+}
+
+.nature{
+    background-color: #58BC82;
+}
+
+.languages{
+    background-color: #2B50AA;
+}
+
+.humans{
+    background-color: #E89005;
+}

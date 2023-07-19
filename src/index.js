@@ -6,10 +6,12 @@ import './styles/global.scss'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Quiz from './pages/Quiz';
+import Disciplinas from './pages/Disciplinas';
 import Disciplina from './pages/Disciplina';
 import Conteudo from './pages/Conteudo';
 import Eventos from './pages/Eventos';
 import Configurações from './pages/Configurações';
+import Dashboard from './pages/Dashboard';
 
 // Firebase
 import firebase from "firebase/compat/app";
@@ -157,6 +159,10 @@ const router = createBrowserRouter([
     element: <Quiz questions={questions} data={data} base={firebase} />
   },
   {
+    path: "/Disciplinas",
+    element: <Disciplinas data={data} base={firebase} />
+  },
+  {
     path: "/Disciplina",
     element: <Disciplina data={data} base={firebase} />
   },
@@ -183,6 +189,10 @@ const router = createBrowserRouter([
   {
     path: "Complete",
     element: <Complete base={firebase} />
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard base={firebase} />
   }
 ]);
 

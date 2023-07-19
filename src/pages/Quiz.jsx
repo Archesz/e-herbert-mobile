@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/quiz.scss';
 import Menu from '../components/Menu/Menu'
+import Navmenu from '../components/Navmenu/Navmenu'
 
 function openQuiz(){
   let quiz = document.querySelector("#quiz")
@@ -113,6 +114,9 @@ function Quiz(props) {
           <h2>Quiz concluído!</h2>
         )}
       </div>
+
+      <Navmenu />
+  
     </div>
   );
 };

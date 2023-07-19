@@ -4,6 +4,7 @@ import '../styles/perfil.scss'
 import Menu from '../components/Menu/Menu'
 import Perfil from '../components/Perfil/Perfil';
 import Conquista from '../components/Conquista/Conquista'
+import Navmenu from '../components/Navmenu/Navmenu'
 
 import { TbPlus } from 'react-icons/tb'  
 
@@ -69,6 +70,8 @@ function PerfilConfig() {
                 </div>
 
             </div>
+            
+            <Navmenu />
 
         </div>
     )

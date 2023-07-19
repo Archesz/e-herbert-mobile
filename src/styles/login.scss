@@ -9,7 +9,7 @@
         justify-content: center;
         padding: 0 30px;
         background-color: var(--background);
-
+        
         .logo-img-area{
             width: 100%;
             display: flex;
@@ -29,17 +29,22 @@
             }
         }
 
+        .img-login{
+            width: 277px;
+            height: 195px;
+            left: 55px;
+            top: 230px;
+            background: url("../assets/Imagens/loginImg.png");
+        }
+
         .login-field {
             width: 100%;
-            height: 360px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: var(--black);
             border-radius: 8px;
-            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 10px;
 
             .login-title{
                 font-weight: bolder;
@@ -51,7 +56,7 @@
             }
 
             .help-text{
-                color: var(--red-dark);
+                color: var(--white);
                 font-weight: bolder;
                 font-size: 14px;
             }
@@ -71,6 +76,7 @@
 
             .input-area {
                 width: 100%;
+            
 
                 .input-icon {
                     position: relative;
@@ -85,7 +91,8 @@
                     width: 100%;
                     border-radius: 4px;
                     font-size: 14px;
-                    background-color: var(--background);
+                    border-radius: 6px;
+                    background: #FFF;
                     border: none;
                     color: var(--grey-200);
                 }
