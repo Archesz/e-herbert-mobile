@@ -12,6 +12,7 @@ import Conteudo from './pages/Conteudo';
 import Eventos from './pages/Eventos';
 import Configurações from './pages/Configurações';
 import Dashboard from './pages/Dashboard';
+import Graphs from './pages/Graphs';
 
 // Firebase
 import firebase from "firebase/compat/app";
@@ -54,58 +55,53 @@ const data = {
 
 const questions = [
   {
-    text: "O acidente radioativo na usina de Chernobyl, na Ucrânia, em 1986, exigiu a evacuação de mais de 100 mil pessoas em um raio de 30 km. Até hoje, a região é isolada e o acesso público, restrito. Pouco tempo após o acidente, muitos estudos indicaram que vários organismos, entre os quais aranhas e insetos, haviam sofrido efeitos negativos da radiação. Porém, estudos recentes, utilizando armadilhas fotográficas e imagens aéreas, mostraram que a cidade-fantasma foi ocupada por diversas espécies de plantas e animais, cuja abundância tem aumentado na região.",
-    options: ["A radiação diminui a taxa fotossintética de plantas, porém a ação de descontaminação do ambiente pelo homem permite o retorno de populações de plantas e, portanto, dos organismos que delas se alimentam.", "A radiação aumenta a taxa de mutação e acelera o metabolismo de plantas, favorecendo sua taxa reprodutiva, o que leva a aumento de suas populações e, consequentemente, das populações de herbívoros.", "A radiação reduz os tumores de animais e plantas, aumentando a taxa de sobrevivência desses seres vivos e, consequentemente, o tamanho de suas populações e das de seus consumidores.", "A radiação tem impactos negativos sobre animais e plantas, porém a ausência de atividade humana no ambiente contaminado por radiação favorece o crescimento das populações desses organismos."],
-    answer: "A radiação reduz os tumores de animais e plantas, aumentando a taxa de sobrevivência desses seres vivos e, consequentemente, o tamanho de suas populações e das de seus consumidores."
+    text: "É comum encontrarmos, nos supermercados, produtos semelhantes em suas finalidades, porém em quantidades, concentrações de ingredientes e preços bem variados. Imagine três produtos com propriedades desinfetantes, com o mesmo princípio ativo. Os produtos têm as seguintes características: Produto A: 0,45% (massa/massa) do princípio ativo, conteúdo de 1 L, valor R$ 11,90; Produto B: 0,17% (massa/massa) do princípio ativo, conteúdo de 0,5 L, valor R$ 2,49; Produto C: 0,33% (massa/massa) do princípio ativo, conteúdo de 2 L, valor R$ 5,19. Os produtos que oferecem a melhor relação custo/benefício seriam, em ordem crescente:",
+    options: ["A, B, C.", "C, A, B.", "C, B, A.", "B, C, A."],
+    answer: "C, A, B."
   },
   {
-    text:
-      'Um pesquisador está estudando a diversidade de espécies de um ecossistema em diferentes níveis tróficos. Ele coletou amostras de água em um lago e identificou os organismos presentes em cada nível trófico. No primeiro nível, encontrou organismos produtores, no segundo nível, organismos herbívoros e no terceiro nível, organismos carnívoros. Ele observou que havia menos espécies de organismos nos níveis tróficos mais elevados. Qual é a principal razão para essa redução na diversidade de espécies nos níveis tróficos mais altos?',
+    text: "No plano cartesiano, considere a reta de equação x + 2y = 4, sendo A, B os pontos de interseção dessa reta com os eixos coordenados. A equação da reta mediatriz do segmento de reta AB é dada por",
     options: [
-      "Os organismos carnívoros são maiores e mais agressivos, o que torna mais difícil para outras espécies compartilhar o mesmo espaço.",
-      "A biomassa disponível é menor nos níveis tróficos mais elevados, o que limita a quantidade de organismos que podem sobreviver.",
-      "Os organismos herbívoros são capazes de se alimentar de uma variedade maior de espécies do que os carnívoros, o que leva a uma maior diversidade de espécies em níveis tróficos inferiores.",
-      "Os organismos carnívoros são mais propensos a sofrer com doenças e parasitas, o que reduz a diversidade de espécies em níveis tróficos mais altos.",
-      "Os organismos produtores são mais eficientes em competir por recursos, o que leva a uma redução na diversidade de espécies nos níveis tróficos superiores."
+      "2x - y = 3.",
+      "2x - y = 5.",
+      "2x + y = 3.",
+      "2x + y = 5.",
     ],
-    answer: 'A biomassa disponível é menor nos níveis tróficos mais elevados, o que limita a quantidade de organismos que podem sobreviver.',
+    answer: '2x - y = 3.',
   },
   {
     text:
-      'O relevo submarino é marcado por uma grande variedade de formas e estruturas. Entre essas formas, destacam-se as plataformas continentais, que são áreas rasas que se estendem desde a costa até uma profundidade média de 200 metros. Essas áreas são importantes para a vida marinha e para a exploração de recursos naturais, como petróleo e gás. Em que tipo de borda de placa tectônica é mais comum encontrar plataformas continentais?',
+      'Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a, b, c são as medidas dos lados do triângulo, sendo a < b < c, é correto afirmar que',
     options: [
-      "Convergente",
-      "Divergente",
-      "Transformante",
-      "Conservativa",
-      "Inativa"
+      "b² + ac = a² +c²",
+      "a² + bc = b² +c²",
+      "a² - bc = b² +c²",
+      "b² - ac = a² +c²",
     ],
-    answer: 'Convergente',
+    answer: 'b² + ac = a² +c²',
   },
   {
     text:
-      'Um objeto de massa m é colocado em uma superfície plana e horizontal com um coeficiente de atrito estático μ. Uma força horizontal F é aplicada ao objeto, mas este não se move. Qual é o valor máximo da força F que pode ser aplicada sem que o objeto comece a se mover?',
+      'A soma dos valores de x que resolvem a equação (1/2 + 1/3) / (x/4 + 1/x) = 1/2 é igual a?',
     options: [
-      "F = μmg",
-      "F = 2μmg",
-      "F = 3μmg",
-      "F = 4μmg",
-      "F = 5μmg"
+      "14/3",
+      "16/3",
+      "18/3",
+      "20/3",
     ],
-    answer: 'F = μmg',
+    answer: '20/3',
   },
   {
     text:
-      'Uma urna contém 5 bolas vermelhas e 7 bolas brancas. Duas bolas são retiradas simultaneamente da urna, sem reposição. Qual é a probabilidade de que as duas bolas sejam da mesma cor?',
+      'O número de anagramas da palavra REFLORESTAMENTO que começam com a sequência FLORES é',
     options: [
-      "5/33",
-      "7/33",
-      "10/33",
-      "12/33",
-      "14/33",
+      "9!.",
+      "9!/2!",
+      "9!/(2!2!).",
+      "9!/(2!2!2!)",
     ],
     answer:
-      '12/33',
+      '9!(2!2!).',
   },
   {
     "text": "Uma loja vende camisetas por R$ 30 cada. Se um cliente compra x camisetas, ele paga R$ 120 no total. Qual é o valor de x?",
@@ -114,20 +110,25 @@ const questions = [
   },
   {
     text:
-      'A genética é o estudo dos genes e hereditariedade. Com base nesse estudo, explique a diferença entre dominância completa e co-dominância em um cruzamento genético.',
+      'Dados preliminares da pandemia do Covid-19 indicam que, no início da disseminação, em determinada região, o número de pessoas contaminadas dobrava a cada 3 dias. Usando que log10 2 ≈ 0,3 e log10 5 ≈ 0,7, após o primeiro contágio, o número de infectados atingirá a marca de 4 mil entre',
     options: [
-      'Dominância completa é quando os dois alelos são expressos igualmente, enquanto a co-dominância é quando apenas um alelo é expresso',
-      'Dominância completa é quando apenas um alelo é expresso, enquanto a co-dominância é quando os dois alelos são expressos igualmente',
-      'Dominância completa é quando apenas um alelo é expresso, enquanto a co-dominância é quando nenhum alelo é expresso',
-      'Dominância completa e co-dominância são a mesma coisa',
+      'o 18º dia e o 24º dia.',
+      'o 25º dia e o 31º dia.',
+      'o 32º dia e o 38º dia.',
+      'o 39º dia e o 45º dia.',
     ],
     answer:
-      'Dominância completa é quando apenas um alelo é expresso, enquanto a co-dominância é quando os dois alelos são expressos igualmente',
+      'o 32º dia e o 38º dia.',
   },
   {
-    "text": "Qual foi a invasão que marcou o início da Segunda Guerra Mundial na Europa?",
-    "options": ["Invasão da Polônia", "Invasão da França", "Invasão da União Soviética", "Invasão da Bélgica"],
-    "answer": "Invasão da Polônia"
+    text: "Duas impressoras funcionando simultaneamente imprimem certa quantidade de páginas em 36 segundos. Sozinha, uma delas imprime a mesma quantidade de páginas em 90 segundos. Funcionando sozinha, para imprimir a mesma quantidade de páginas, a outra impressora gastaria",
+    options: [
+      "48 segundos.",
+      "54 segundos.",
+      "60 segundos.",
+      "72 segundos.",
+    ],
+    answer: "60 segundos."
   }
 ];
 
@@ -193,6 +194,10 @@ const router = createBrowserRouter([
   {
     path: "/Dashboard",
     element: <Dashboard base={firebase} />
+  },
+  {
+    path: "/Graphs",
+    element: <Graphs base={firebase} />
   }
 ]);
 

@@ -1,0 +1,9 @@
+{
+    "Matemática": [
+        {
+            "text": "O acidente radioativo na usina de Chernobyl, na Ucrânia, em 1986, exigiu a evacuação de mais de 100 mil pessoas em um raio de 30 km. Até hoje, a região é isolada e o acesso público, restrito. Pouco tempo após o acidente, muitos estudos indicaram que vários organismos, entre os quais aranhas e insetos, haviam sofrido efeitos negativos da radiação. Porém, estudos recentes, utilizando armadilhas fotográficas e imagens aéreas, mostraram que a cidade-fantasma foi ocupada por diversas espécies de plantas e animais, cuja abundância tem aumentado na região.",
+            "options": ["A radiação diminui a taxa fotossintética de plantas, porém a ação de descontaminação do ambiente pelo homem permite o retorno de populações de plantas e, portanto, dos organismos que delas se alimentam.", "A radiação aumenta a taxa de mutação e acelera o metabolismo de plantas, favorecendo sua taxa reprodutiva, o que leva a aumento de suas populações e, consequentemente, das populações de herbívoros.", "A radiação reduz os tumores de animais e plantas, aumentando a taxa de sobrevivência desses seres vivos e, consequentemente, o tamanho de suas populações e das de seus consumidores.", "A radiação tem impactos negativos sobre animais e plantas, porém a ausência de atividade humana no ambiente contaminado por radiação favorece o crescimento das populações desses organismos."],
+            "answer": "A radiação reduz os tumores de animais e plantas, aumentando a taxa de sobrevivência desses seres vivos e, consequentemente, o tamanho de suas populações e das de seus consumidores."
+        },
+    ]
+}

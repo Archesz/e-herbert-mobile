@@ -3,6 +3,8 @@ import '../styles/quiz.scss';
 import Menu from '../components/Menu/Menu'
 import Navmenu from '../components/Navmenu/Navmenu'
 
+// Adicionar temporizador no Quiz
+
 function openQuiz(){
   let quiz = document.querySelector("#quiz")
   let form = document.querySelector("#form")

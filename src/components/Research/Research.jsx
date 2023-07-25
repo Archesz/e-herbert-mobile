@@ -2,10 +2,9 @@ import React, {useState} from 'react'
 import './Research.scss'
 
 const data = [
-    { "Nome": "IC Unicamp: Unicamp recebe o primeiro Cluster Multi-FPGA do Brasil;", "Link": "", "Data": "08/07/2023", "Hora": "12:45" },
-    { "Nome": "Como funciona o ChatGPT e os Transformers? O Fim vai chegar?", "Link": "", "Data": "08/07/2023", "Hora": "11:00" },
-    { "Nome": "Modelo que mapeia e caracteriza Covid no pulmão é premiado na Unicamp.", "Link": "", "Data": "08/07/2023", "Hora": "11:00" },
-
+    { "Nome": "A prova de fluxo ajuda os matemáticos a encontrar estabilidade no caos", "Link": "https://www.quantamagazine.org/flow-proof-helps-mathematicians-find-stability-in-chaos-20230615/", "Data": "25/07/2023", "Hora": "12:45" },
+    { "Nome": "A matemática e a física podem salvar um coração arrítmico?", "Link": "https://www.quantamagazine.org/can-math-and-physics-save-an-arrhythmic-heart-20230712/", "Data": "25/07/2023", "Hora": "11:00" },
+    { "Nome": "A New Approach to Computation Reimagines Artificial Intelligence", "Link": "https://www.quantamagazine.org/a-new-approach-to-computation-reimagines-artificial-intelligence-20230413/", "Data": "25/07/2023", "Hora": "11:00" },
 ];
 
 function Research() {
@@ -44,7 +43,7 @@ function Research() {
 
                 <span className='research-name'>Pesquisa e Ciência</span>
 
-                <a className='research-title' href={data[currentDataIndex].Link}>
+                <a className='research-title' href={data[currentDataIndex].Link} target='_blank'>
                     {data[currentDataIndex].Nome}
                 </a>
 

@@ -1,16 +1,10 @@
 import React from 'react'
 import Navmenu from '../components/Navmenu/Navmenu'
 import Menu from '../components/Menu/Menu'
+import Bar from '../graphs/Bar';
+import "../styles/graphs.scss"
 
-import '../styles/dashboard.scss'
-import Planner from '../components/Planner/Planner';
-
-function goToDash(disciplina){
-    window.location.assign("/Graphs")
-}
-
-function Dashboard() {
-
+function Graphs(props) {
     const objetoSerializado = localStorage.getItem("HerbertData");
     const data = JSON.parse(objetoSerializado)[0];
 
@@ -33,23 +27,19 @@ function Dashboard() {
                             </select>
                         </div>
 
-                        <button className='btn-form' onClick={goToDash}>Analisar</button>
+                        <button className='btn-form' onClick="">Analisar</button>
 
                     </div>
 
                 </div>
 
-                <span className="dashboard-subtitle">Plano de Estudos</span>
+                <span className="dashboard-subtitle">Análise</span>
 
                 <span className="dashboard-explain">Essa versão do plano de estudos é um protótipo gerado com base nos dados adquiridos pelos vestibulares e utilizando as suas informações prévias.</span>
 
-                <span className="dashboard-explain up-2">Abaixo estão as matérias recomendadas para estudar nessa semana!</span>
-
-                <div className='planner-area'>
-                    
-                    <Planner />
-
-                </div>
+                <div className="space"/>
+                
+                <Bar type="Acertos"/>
 
             </div>
 
@@ -59,4 +49,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default Graphs
